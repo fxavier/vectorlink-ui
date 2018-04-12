@@ -1,0 +1,112 @@
+<div class="container">
+    <div class="ui-g">
+      <div class="ui-g-12">
+        <h1>Pulverizacao Totais</h1>
+      </div>
+
+      <div class="ui-g-4">
+        <label style="display:block">Data de Pulverizacao</label>
+        <input pInputText type="text">
+      </div>
+
+      <div class="ui-g-4">
+        <label style="display: block">Distrito</label>
+        <p-dropdown>
+
+        </p-dropdown>
+
+
+      </div>
+
+      <div class="ui-g-4">
+          <label style="display: block">Base Operacional</label>
+          <p-dropdown></p-dropdown>
+        </div>
+
+      <div class="ui-g-4">
+        <label style="display: block">Localidade</label>
+        <p-dropdown></p-dropdown>
+      </div>
+
+      <div class="ui-g-4">
+        <label style="display: block">Bairro</label>
+        <p-dropdown></p-dropdown>
+      </div>
+
+      <div class="ui-g-4">
+        <label style="display: block">Roceador</label>
+        <p-dropdown></p-dropdown>
+      </div>
+
+      <div class="ui-g-12">
+        <button pButton type="submit" class="ui-button-primary" label="Pesquisar"></button>
+      </div>
+    </div>
+
+    <div class="ui-g">
+      <div class="ui-g-12">
+        <p-dataTable [value]="sprayTotals" [paginator]="true" [rows]="5" [responsive]="true">
+          <p-headerColumnGroup>
+            <p-row>
+                <p-column header="Data" rowspan="3"></p-column>
+                <p-column header="Pulverizada" colspan="5"></p-column>
+                <p-column header="Nao Pulverizada" colspan="5"></p-column>
+                <p-column header="Insecticidas" colspan="3"></p-column>
+                <p-column header="Compartimentos" colspan="2"></p-column>
+                <p-column colspan="1"></p-column>
+            </p-row>
+            <p-row>
+
+                <p-column header="Estrutura"></p-column>
+                <p-column header="H"></p-column>
+                <p-column header="M"></p-column>
+                <p-column header="M.G"></p-column>
+                <p-column header="C < 5"></p-column>
+                <p-column header="Estrtura"></p-column>
+                <p-column header="H"></p-column>
+                <p-column header="M"></p-column>
+                <p-column header="M.G"></p-column>
+                <p-column header="C < 5"></p-column>
+                <p-column header="Rcbida"></p-column>
+                <p-column header="Cheia"></p-column>
+                <p-column header="Vazia"></p-column>
+                <p-column header="Enctrada"></p-column>
+                <p-column header="Pulvrzda"></p-column>
+                <p-column header="Accoes" colspan="1"></p-column>
+            </p-row>
+
+         </p-headerColumnGroup>
+
+              <p-column field="sprayDate"></p-column>
+              <p-column field="sprayedStructures"></p-column>
+              <p-column field="sprayedMan"></p-column>
+              <p-column field="sprayedWomen"></p-column>
+              <p-column field="sprayedPregnantWomen"></p-column>
+              <p-column field="sprayedChildren"></p-column>
+              <p-column field="notSprayedStructures"></p-column>
+              <p-column field="notSprayedMen"></p-column>
+              <p-column field="notSprayedWomen"></p-column>
+              <p-column field="notSprayedPregnantWomen"></p-column>
+              <p-column field="notSprayedChildren"></p-column>
+              <p-column field="insecticideIssued"></p-column>
+              <p-column field="insecticideFullReturned"></p-column>
+              <p-column field="insecticideEmptyReturned"></p-column>
+              <p-column field="roomsFound"></p-column>
+              <p-column field="roomsSprayed"></p-column>
+
+              <p-column styleClass="col-acoes">
+                <ng-template pTemplate="body">
+                  <a pButton icon="fa-pencil" pTooltip="Editar" tooltipPosition="top"></a>
+                  <button pButton icon="fa-trash" pTooltip="Excluir" tooltipPosition="top"></button>
+                </ng-template>
+
+              </p-column>
+        </p-dataTable>
+      </div>
+      <div class="ui-g-12">
+        <a pButton icon="fa-plus" label="Novo" pTooltip="Adicionar novo Total"></a>
+      </div>
+    </div>
+
+</div>
+

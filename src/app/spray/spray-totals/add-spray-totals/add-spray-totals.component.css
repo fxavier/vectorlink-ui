@@ -1,0 +1,13 @@
+colgroup col {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  text-align: center;
+}
+tr.secondary-headers th {
+  border: 1px;
+  text-align: center;
+}
+
+td input {
+  width: 75%;
+}
