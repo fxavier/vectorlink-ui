@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DataTableGroupDemoComponent } from './data-table-group-demo.component';
+import { AddPaisesComponent } from './add-paises.component';
 
-describe('DataTableGroupDemoComponent', () => {
-  let component: DataTableGroupDemoComponent;
-  let fixture: ComponentFixture<DataTableGroupDemoComponent>;
+describe('AddPaisesComponent', () => {
+  let component: AddPaisesComponent;
+  let fixture: ComponentFixture<AddPaisesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DataTableGroupDemoComponent ]
+      declarations: [ AddPaisesComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DataTableGroupDemoComponent);
+    fixture = TestBed.createComponent(AddPaisesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

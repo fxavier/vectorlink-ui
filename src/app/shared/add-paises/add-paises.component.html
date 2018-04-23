@@ -1,0 +1,28 @@
+<div class="container">
+  <form>
+    <div class="ui-g">
+      <div class="ui-g-12">
+        <h1>Novo Pais</h1>
+      </div>
+      <div class="ui-g-12 ui-fluid">
+       <label>Nome</label>
+       <input pInputText type="text" name="nome" ngModel #nome="ngModel" required minlength="3">
+       <app-message [control]="nome" error="required"
+       text="Informe o nome do pais"></app-message>
+
+       <app-message [control]="nome" error="minlength"
+       text="O minimo deve ser 3 caracteres"></app-message>
+
+      </div>
+       <div class="ui-g-12 ui-fluid">
+         <h6>Status</h6>
+         <p-inputSwitch onLabel="Activo" offLabel="Inactivo"></p-inputSwitch>
+       </div>
+    </div>
+  </form>
+  <div class="ui-g-12">
+    <button pButton type="submit" label="Salvar"></button>
+    <button pButton type="button" label="Novo" class="ui-button-info"></button>
+    <a routerLink="/paises">Voltar para a pesquisa</a>
+  </div>
+</div>

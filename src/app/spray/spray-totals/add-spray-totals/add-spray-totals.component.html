@@ -1,89 +1,122 @@
 
     <div class="container">
+        <form>
 
-        <div class="ui-g">
-          <div class="ui-g-12">
-            <h1>Pulverizacao Totais</h1>
-          </div>
+          <div class="ui-g">
+            <div class="ui-g-12">
+              <h1>Novo Total de pulverização</h1>
+            </div>
+            <div class="ui-g-6 ui-md-3 ui-fluid">
+              <label>Data de pulverização</label>
+              <p-calendar dateFormat="dd/mm/yy"
+                [inline]="false" [readonlyInput]="false"
+                [showIcon]="false"></p-calendar>
+            </div>
+            <div class="ui-g-6 ui-md-3 ui-fluid">
+              <label>Distrito</label>
+              <p-dropdown [options]="distritos" placeholder="Selecione"
+                [autoWidth]="false"></p-dropdown>
+            </div>
+            <div class="ui-g-6 ui-md-3 ui-fluid">
+                <label>Base Operacional</label>
+                <p-dropdown [options]="bases" placeholder="Selecione"
+                  [autoWidth]="false"></p-dropdown>
+              </div>
 
-          <div class="ui-g-4">
-            <label style="display:block">Data de Pulverizacao</label>
-            <input pInputText type="text">
-          </div>
+              <div class="ui-g-6 ui-md-3 ui-fluid">
+                <label>Localidade</label>
+                <p-dropdown [options]="localidades" placeholder="Selecione"
+                  [autoWidth]="false" [filter]="true" ></p-dropdown>
+              </div>
 
-          <div class="ui-g-4">
-            <label style="display: block">Distrito</label>
-            <p-dropdown>
+              <div class="ui-g-6 ui-md-3 ui-fluid">
+                <label>Bairro</label>
+                <p-dropdown [options]="bairros" placeholder="Selecione"
+                  [autoWidth]="false" [filter]="true"></p-dropdown>
+              </div>
+              <div class="ui-g-12 ui-md-6 ui-fluid">
+                  <label>Roceador</label>
+                  <p-dropdown [options]="roceadores" placeholder="Selecione"
+                    [autoWidth]="false" [filter]="true" ></p-dropdown>
+                </div>
+                <div class="ui-g-6 ui-md-3 ui-fluid">
+                  <label>Chefe de equipa</label>
+                  <p-dropdown [options]="teamLeader" placeholder="Selecione"
+                    [autoWidth]="false" [filter]="true" ></p-dropdown>
+                </div>
+                <div class="ui-g-6 ui-md-4 ui-fluid">
+                    <label>Garrafas recebidas</label>
+                    <input pInputText type="text">
+                </div>
+                <div class="ui-g-6 ui-md-4 ui-fluid">
+                    <label>Garrafas cheias devolvidas</label>
+                    <input pInputText type="text">
+                </div>
+                <div class="ui-g-6 ui-md-4 ui-fluid">
+                    <label>Garrafas vazias devolvidas</label>
+                    <input pInputText type="text">
+                </div>
 
-            </p-dropdown>
+                <div class="ui-g-12 ui-md-1 ui-fluid">
+                    <table class="table table-condensed-extra table-hover table-rensponsive">
+                        <colgroup>
+                          <col span="5">
+                          <col span="5">
+                          <col span="2">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th colspan="5">Pulverizadas</th>
+                            <th colspan="5">Não Pulverizadas</th>
+                            <th colspan="2">Compartimentos Elegiveis</th>
+                          </tr>
+                          <tr class="secondary-headers">
+                            <th>Casas Pulverizadas</th>
+                            <th>Homens</th>
+                            <th>Mulheres</th>
+                            <th>Mulhrs Gravidas</th>
+                            <th>Criancas < 5 anos de idade</th>
+                            <th>Casas nao Pulverizadas</th>
+                            <th>Homens</th>
+                            <th>Mulheres</th>
+                            <th>Mulheres Gravidas</th>
+                            <th>Criancas < 5 anos de idade</th>
+                            <th>Encontrados</th>
+                            <th>Pulverizados</th>
 
-
-          </div>
-
-          <div class="ui-g-4">
-              <label style="display: block">Base Operacional</label>
-              <p-dropdown></p-dropdown>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <td><input pInputText type="text" ></td>
+                          <td><input pInputText type="text"></td>
+                          <td><input pInputText type="text" ></td>
+                          <td><input pInputText type="text"></td>
+                          <td><input pInputText type="text" ></td>
+                          <td><input pInputText type="text"></td>
+                          <td><input pInputText type="text" ></td>
+                          <td><input pInputText type="text"></td>
+                          <td><input pInputText type="text" ></td>
+                          <td><input pInputText type="text"></td>
+                          <td><input pInputText type="text" ></td>
+                          <td><input pInputText type="text"></td>
+                        </tbody>
+                  </table>
+                </div>
+              <div class="ui-g-12">
+                <button pButton type="submit" label="Salvar"></button>
+                <button pButton type="button" label="Novo" class="ui-button-info"></button>
+                <a href="javascript:;">Voltar para a pesquisa</a>
+              </div>
             </div>
 
-          <div class="ui-g-4">
-            <label style="display: block">Localidade</label>
-            <p-dropdown></p-dropdown>
-          </div>
-
-          <div class="ui-g-4">
-            <label style="display: block">Bairro</label>
-            <p-dropdown></p-dropdown>
-          </div>
-
-          <div class="ui-g-4">
-            <label style="display: block">Roceador</label>
-            <p-dropdown></p-dropdown>
-          </div>
-
-       <table class="table table-condensed-extra table-hover">
-          <colgroup>
-            <col span="5">
-            <col span="4">
-            <col span="5">
-          </colgroup>
-
-          <thead>
-            <tr class="top-headers">
-              <th colspan="5">Pulverizadas</th>
-              <th colspan="5">Nao Pulverizadas</th>
-              <th colspan="2">Compartimentos Elegiveis</th>
-            </tr>
-            <tr class="secondary-headers">
-              <th>Casas Pulverizadas</th>
-              <th>Homens</th>
-              <th>Mulheres</th>
-              <th>Mulheres Gravidas</th>
-              <th>Criancas < 5 anos</th>
-              <th>Casas nao Pulverizadas</th>
-              <th>Homens</th>
-              <th>Mulheres</th>
-              <th>Mulheres Gravidas</th>
-              <th>Criancas < 5 anos</th>
-              <th>Encontrados</th>
-              <th>Pulverizados</th>
-
-            </tr>
-          </thead>
-          <tbody>
-          <td><input pInputText type="text" ></td>
-          <td><input pInputText type="text"></td>
-          <td><input pInputText type="text" ></td>
-          <td><input pInputText type="text"></td>
-          <td><input pInputText type="text" ></td>
-          <td><input pInputText type="text"></td>
-          <td><input pInputText type="text" ></td>
-          <td><input pInputText type="text"></td>
-          <td><input pInputText type="text" ></td>
-          <td><input pInputText type="text"></td>
-          <td><input pInputText type="text" ></td>
-          <td><input pInputText type="text"></td>
+          </form>
+        </div>
+                          <tr class="top-headers">
 
 
-          </tbody>
-    </table>
-  </div>
+
+
+
+
+
+

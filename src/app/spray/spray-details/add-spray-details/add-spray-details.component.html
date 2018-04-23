@@ -44,50 +44,42 @@
                 [autoWidth]="false" [filter]="true" ></p-dropdown>
             </div>
             <div class="ui-g-6 ui-md-4 ui-fluid">
-                <label>Garrafas recebidas</label>
-                <input pInputText type="text">
-            </div>
-            <div class="ui-g-6 ui-md-4 ui-fluid">
-                <label>Garrafas cheias devolvidas</label>
-                <input pInputText type="text">
-            </div>
-            <div class="ui-g-6 ui-md-4 ui-fluid">
-                <label>Garrafas vazias devolvidas</label>
-                <input pInputText type="text">
-            </div>
-            <div class="ui-g-6 ui-md-4 ui-fluid">
                 <label>Nome do chefe do agregado familiar</label>
                 <input pInputText type="text">
             </div>
-            <div class="ui-g-6 ui-md-4 ui-fluid">
+            <div class="ui-g-6 ui-md-3 ui-fluid">
                 <label>Genero da pessoa entrevistada</label>
                 <p-dropdown [options]="genero" placeholder="Selecione"
                   [autoWidth]="false" ></p-dropdown>
               </div>
-              <div class="ui-g-6 ui-md-4 ui-fluid">
+              <div class="ui-g-6 ui-md-2 ui-fluid">
                 <label>Codigo PIDOM</label>
-                <input pInputText type="text">
+                <p-inputMask mask="9-999999"></p-inputMask>
             </div>
+            <div class="ui-g-6 ui-md-3 ui-fluid">
+                <label>Situacao de pulverização</label>
+                <p-dropdown [options]="situacao" placeholder="Selecione"
+                  [autoWidth]="false" ></p-dropdown>
+              </div>
             <div class="ui-g-12 ui-md-1 ui-fluid">
                 <table class="table table-condensed-extra table-hover table-rensponsive">
                     <colgroup>
 
-                      <col span="1">
                       <col span="5">
                       <col span="5">
                       <col span="2">
+                      <col span="1">
                     </colgroup>
 
                     <thead>
                       <tr class="top-headers">
 
-                        <th colspan="1">&nbsp;</th>
                         <th colspan="5">Pulverizadas</th>
                         <th colspan="5">Não Pulverizadas</th>
                         <th colspan="2">Compartimentos Elegiveis</th>
+                        <th colspan="1">&nbsp;</th>
                       </tr>
                       <tr class="secondary-headers">
-                        <th>Situação</th>
                         <th>Casas Pulverizadas</th>
                         <th>Homens</th>
                         <th>Mulheres</th>
@@ -100,35 +92,69 @@
                         <th>Criancas < 5 anos de idade</th>
                         <th>Encontrados</th>
                         <th>Pulverizados</th>
+                        <th>Codigo de Estudo</th>
 
                       </tr>
                     </thead>
                     <tbody>
                       <td>
-                          <div class="ui-g-4 ui-md-2 ui-fluid">
-                          <p-dropdown [options]="situacao" placeholder="Selecione"
-                            [autoWidth]="true"></p-dropdown>
-                        </div>
+                        <input pInputText type="text"
+                        currencyMask [options]="{prefix: '', allowNegative: false}">
                       </td>
-                      <td><input pInputText type="text" ></td>
-                      <td><input pInputText type="text"></td>
-                      <td><input pInputText type="text" ></td>
-                      <td><input pInputText type="text"></td>
-                      <td><input pInputText type="text" ></td>
-                      <td><input pInputText type="text"></td>
-                      <td><input pInputText type="text" ></td>
-                      <td><input pInputText type="text"></td>
-                      <td><input pInputText type="text" ></td>
-                      <td><input pInputText type="text"></td>
-                      <td><input pInputText type="text" ></td>
-                      <td><input pInputText type="text"></td>
+                      <td>
+                          <input pInputText type="text"
+                          currencyMask [options]="{prefix: '', allowNegative: false}">
+                      </td>
+                      <td>
+                          <input pInputText type="text"
+                          currencyMask [options]="{prefix: '', allowNegative: false}">
+                      </td>
+                      <td>
+                          <input pInputText type="text"
+                          currencyMask [options]="{prefix: '', allowNegative: false}">
+                      </td>
+                      <td>
+                          <input pInputText type="text"
+                          currencyMask [options]="{prefix: '', allowNegative: false}">
+                      </td>
+                      <td>
+                          <input pInputText type="text"
+                          currencyMask [options]="{prefix: '', allowNegative: false}">
+                      </td>
+                      <td>
+                          <input pInputText type="text"
+                          currencyMask [options]="{prefix: '', allowNegative: false}">
+                      </td>
+                      <td>
+                          <input pInputText type="text"
+                          currencyMask [options]="{prefix: '', allowNegative: false}">
+                      </td>
+                      <td>
+                          <input pInputText type="text"
+                          currencyMask [options]="{prefix: '', allowNegative: false}">
+                      </td>
+                      <td>
+                          <input pInputText type="text"
+                          currencyMask [options]="{prefix: '', allowNegative: false}">
+                      </td>
+                      <td>
+                          <input pInputText type="text"
+                          currencyMask [options]="{prefix: '', allowNegative: false}">
+                      </td>
+                      <td>
+                          <input pInputText type="text"
+                          currencyMask [options]="{prefix: '', allowNegative: false}">
+                      </td>
+
+
+                      <td><p-inputMask mask="9999-999"></p-inputMask></td>
                     </tbody>
               </table>
             </div>
           <div class="ui-g-12">
             <button pButton type="submit" label="Salvar"></button>
             <button pButton type="button" label="Novo" class="ui-button-info"></button>
-            <a href="javascript:;">Voltar para a pesquisa</a>
+            <a routerLink="/spray-details">Voltar para a pesquisa</a>
           </div>
         </div>
 
